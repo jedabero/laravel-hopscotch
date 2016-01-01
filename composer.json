@@ -1,0 +1,23 @@
+{
+    "name": "jedabero/laravel-hopscotch",
+    "description": "",
+    "authors": [
+        {
+            "name": "jedabero",
+            "email": "jedabero@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Jedabero\\LaravelHopscotch\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

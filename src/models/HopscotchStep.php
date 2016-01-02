@@ -1,6 +1,6 @@
 <?php
 
-class HopscotchSteps extends \Eloquent {
+class HopscotchStep extends \Eloquent {
 	protected $fillable = [];
 
 	public function tour()

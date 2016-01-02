@@ -1,6 +1,6 @@
 <?php
 
-class HopscotchFunctions extends \Eloquent {
+class HopscotchFunction extends \Eloquent {
 	protected $fillable = [];
 
 	public function hopscotch()

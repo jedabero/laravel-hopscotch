@@ -1,11 +1,11 @@
 <?php
 
-class HopscotchFunction extends \Eloquent {
-	protected $fillable = [];
+class HopscotchFunction extends \Eloquent
+{
+    protected $fillable = [];
 
-	public function hopscotch()
-	{
-		return $this->morphTo();
-	}
-
+    public function hopscotch()
+    {
+        return $this->morphTo();
+    }
 }

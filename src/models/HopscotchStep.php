@@ -1,16 +1,23 @@
 <?php
 
-class HopscotchStep extends \Eloquent {
-	protected $fillable = [];
+class HopscotchStep extends \Eloquent
+{
+    use OnPrevTrait;
+    use OnNextTrait;
+    use OnShowTrait;
+    use OnCTATrait;
 
-	public function tour()
-	{
-		return $this->belongsTo('HopscotchTour');
-	}
+    protected $appends = ['onPrev','onNext','onShow','onCTA'];
 
-	public function functions()
-	{
-		return $this->morphMany('HopscotchFunction', 'hopscotch');
-	}
+    protected $fillable = [];
 
+    public function tour()
+    {
+        return $this->belongsTo('HopscotchTour');
+    }
+
+    public function functions()
+    {
+        return $this->morphMany('HopscotchFunction', 'hopscotch');
+    }
 }

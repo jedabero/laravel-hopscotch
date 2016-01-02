@@ -1,6 +1,7 @@
 {
     "name": "jedabero/laravel-hopscotch",
     "description": "",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "jedabero",
@@ -13,7 +14,8 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "src/migrations",
+            "src/models"
         ],
         "psr-0": {
             "Jedabero\\LaravelHopscotch\\": "src/"

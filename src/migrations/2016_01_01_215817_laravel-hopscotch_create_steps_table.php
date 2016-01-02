@@ -12,7 +12,7 @@ class LaravelHopscotchCreateStepsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('steps', function ($table)
+		Schema::create('hopscotch_steps', function ($table)
 		{
 			$table->tinyInteger('stepOrder');
 			$table->string('target');
@@ -35,7 +35,7 @@ class LaravelHopscotchCreateStepsTable extends Migration {
 			$table->boolean('fixedElement')->default(false);
 			$table->boolean('nextOnTargetClick')->nullable();
 			$table->string('tour_id');
-			$table->foreign('tour_id')->references('id')->on('tours')->onDelete('cascade');
+			$table->foreign('tour_id')->references('id')->on('hopscotch_tours')->onDelete('cascade');
 			$table->nullableTimestamps();
 		});
 	}
@@ -47,7 +47,7 @@ class LaravelHopscotchCreateStepsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('steps');
+		Schema::drop('hopscotch_steps');
 	}
 
 }

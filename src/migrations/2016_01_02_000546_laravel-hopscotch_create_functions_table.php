@@ -12,7 +12,7 @@ class LaravelHopscotchCreateFunctionsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('functions', function ($table)
+		Schema::create('hopscotch_functions', function ($table)
 		{
 			$table->string('event');
 			$table->string('name');
@@ -28,7 +28,7 @@ class LaravelHopscotchCreateFunctionsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('functions');
+		Schema::drop('hopscotch_functions');
 	}
 
 }

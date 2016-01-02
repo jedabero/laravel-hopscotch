@@ -12,7 +12,7 @@ class LaravelHopscotchCreateToursTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('tours', function ($table)
+		Schema::create('hopscotch_tours', function ($table)
 		{
 			$table->string('id')->primary();
 			$table->smallInteger('bubbleWidth')->default(280)->unsigned();
@@ -37,7 +37,7 @@ class LaravelHopscotchCreateToursTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('tours');
+		Schema::drop('hopscotch_tours');
 	}
 
 }

@@ -16,8 +16,10 @@ class LaravelHopscotchCreateFunctionsTable extends Migration {
 		{
 			$table->string('event');
 			$table->string('name');
-			$table->morphs('hopscotch');
+			$table->string('hopscotch_id');
+			$table->string('hopscotch_type');
 			$table->nullableTimestamps();
+			$table->index(['hopscotch_id', 'hopscotch_type']);
 		});
 	}
 

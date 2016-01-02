@@ -14,6 +14,7 @@ class LaravelHopscotchCreateStepsTable extends Migration {
 	{
 		Schema::create('hopscotch_steps', function ($table)
 		{
+			$table->string('id')->primary();
 			$table->tinyInteger('stepOrder');
 			$table->string('target');
 			$table->enum('placement', Config::get('laravel-hopscotch::steps.placements'));
